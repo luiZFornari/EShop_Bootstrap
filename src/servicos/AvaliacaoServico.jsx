@@ -65,6 +65,21 @@ export const cadastraAvaliacaoAPI = async (objeto, metodo) => {
       method: metodo,
       headers: {
         "Content-Type": "application/json",
+      },
+      body: JSON.stringify(objeto),
+    }
+  );
+  const data = await response.json();
+  return data;
+};
+
+export const editarAvaliacaoAPI = async (objeto, metodo) => {
+  const response = await fetch(
+    `${process.env.REACT_APP_ENDERECO_API}/avaliacao`,
+    {
+      method: metodo,
+      headers: {
+        "Content-Type": "application/json",
         authorization: Autenticacao.pegaAutenticacao().token,
       },
       body: JSON.stringify(objeto),

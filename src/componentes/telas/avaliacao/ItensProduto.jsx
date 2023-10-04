@@ -43,7 +43,6 @@ function ItensProduto() {
                   </div>
                   <div className="row">
                     <div className="col">
-                      {" "}
                       <h6>Lançamento: {produto.data_cadastro}</h6>
                     </div>
                   </div>

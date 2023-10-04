@@ -6,6 +6,7 @@ import {
   deleteAvaliacaoPorCodigoAPI,
   getAvaliacaoPorCodigoAPI,
   getAvaliacaoPorProdutoAPI,
+  editarAvaliacaoAPI,
 } from "../../../servicos/AvaliacaoServico";
 import AcordionPrivado from "./Acordion";
 import Form from "./Form";
@@ -85,7 +86,12 @@ function Avaliacao() {
     e.preventDefault();
     const metodo = editar ? "PUT" : "POST";
     try {
-      let retornoAPI = await cadastraAvaliacaoAPI(objeto, metodo);
+      let retornoAPI;
+      if (metodo == "PUT") {
+        retornoAPI = await editarAvaliacaoAPI(objeto, metodo);
+      } else {
+        retornoAPI = await cadastraAvaliacaoAPI(objeto, metodo);
+      }
       setAlerta({ status: retornoAPI.status, message: retornoAPI.message });
       setObjeto(retornoAPI.objeto);
       if (!editar) {
