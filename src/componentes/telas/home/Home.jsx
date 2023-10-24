@@ -4,7 +4,6 @@ import HomeContext from "./HomeContext";
 import { getCategoriasAPI } from "../../../servicos/CategoriaServico";
 import { getProdutosAPI } from "../../../servicos/ProdutoServico";
 import Carregando from "../../comuns/Carregando";
-import Carrosel from "./Carrosel";
 import Card from "./Card";
 
 function ProdutoPublico() {
