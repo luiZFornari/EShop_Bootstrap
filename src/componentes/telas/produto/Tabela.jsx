@@ -17,6 +17,7 @@ function Tabela() {
         data-bs-toggle="modal"
         data-bs-target="#modalEdicao"
         onClick={() => novoObjeto()}
+        aria-label="Novo produto"
       >
         Novo <i className="bi bi-file-earmark-plus"></i>
       </button>
@@ -47,12 +48,14 @@ function Tabela() {
                     data-bs-toggle="modal"
                     data-bs-target="#modalEdicao"
                     onClick={() => editarObjeto(objeto.codigo)}
+                    aria-label="Editar"
                   >
                     <i className="bi bi-pencil-square"></i>
                   </button>
                   <button
                     className="btn btn-danger"
                     title="Remover"
+                    aria-label="Remover"
                     onClick={() => {
                       remover(objeto.codigo);
                     }}

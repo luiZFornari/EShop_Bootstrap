@@ -16,6 +16,7 @@ function Tabela() {
         data-bs-toggle="modal"
         data-bs-target="#modalEdicao"
         onClick={() => novoObjeto()}
+        aria-label="Nova categoria"
       >
         Novo <i className="bi bi-file-earmark-plus"></i>
       </button>
@@ -40,6 +41,7 @@ function Tabela() {
                     data-bs-toggle="modal"
                     data-bs-target="#modalEdicao"
                     onClick={() => editarObjeto(objeto.codigo)}
+                    aria-label="Editar"
                   >
                     <i className="bi bi-pencil-square"></i>
                   </button>
@@ -49,6 +51,7 @@ function Tabela() {
                     onClick={() => {
                       remover(objeto.codigo);
                     }}
+                    aria-label="Remover"
                   >
                     <i className="bi bi-trash"></i>
                   </button>

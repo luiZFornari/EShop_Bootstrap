@@ -39,10 +39,15 @@ function Login() {
             console.error(err.message);
         }
 
-        const autenticacao = pegaAutenticacao();
-        console.log(autenticacao);
-        console.log("token: " + autenticacao.token);
-        console.log("decoded: " + JSON.stringify(jwt_decode(autenticacao.token)));
+        try {
+            const autenticacao = pegaAutenticacao();
+            console.log(autenticacao);
+            console.log("token: " + autenticacao.token);
+            console.log("decoded: " + JSON.stringify(jwt_decode(autenticacao.token)));
+        } catch (error) {
+            console.log("Erro ao pegar usuario")   
+        }
+     
 
 
     };
