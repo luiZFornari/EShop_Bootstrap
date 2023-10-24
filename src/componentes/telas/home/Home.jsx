@@ -64,7 +64,6 @@ function ProdutoPublico() {
       }}
     >
       <Carregando carregando={carregando}>
-        <Carrosel />
         <Card />
       </Carregando>
     </HomeContext.Provider>
